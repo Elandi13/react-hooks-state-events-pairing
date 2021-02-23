@@ -1,20 +1,20 @@
 import video from "../data/video.js";
+import VideoDisplay from "./VideoDisplay.js";
+import Comments from "./Comments"
+
+console.log(video.title)
 
 function App() {
-  console.log("Here's your data:", video);
+  // console.log("Here's your data:", video);
 
   return (
     <div className="App">
-      <iframe
-        width="919"
-        height="525"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        frameborder="0"
-        allowfullscreen
-        title="Thinking in React"
-      />
+      <VideoDisplay video={video}/>
+      {/* <hr> */}
+      <Comments comments ={video.comments}/>
     </div>
   );
 }
 
 export default App;
+
